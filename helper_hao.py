@@ -9,8 +9,8 @@ def get_ratings():
     Returns a tuple containing:
         - a dataframe of ratings
         - a sparse matrix where rows correspond to users and columns correspond
-        to jokess. Each element is the user's rating for that movie.
+        to jokes. Each element is the user's rating for that movie.
     '''
     filename = '/Users/haowei/Documents/gal/Day_51_recommender_case_study/data/ratings.dat'
-    df = pd.read_csv(filename)
+    df = pd.read_csv(filename,sep = '\t')
     return df, graphlab.SFrame(df)
